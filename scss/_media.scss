@@ -1,0 +1,116 @@
+@media (hover: hover) {
+    .game-cell:hover {
+        &:before {
+            background-color: darken(#808080, 10);
+        }
+    }
+}
+
+@media screen and (max-height: 375px) {
+    .game {
+        &__field {
+            gap: 5px;
+        }
+
+        &__zone {
+            padding: 7px {
+                bottom: 0;
+            }
+        }
+
+        &__main {
+            grid-template-rows: 1fr 30px;
+        }
+
+        &__button-box {
+            &>.btn {
+                padding: 2px 8px;
+                z-index: 3;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 425px) and (min-height: 370px) {
+    .game {
+        &__zone {
+            height: 360px;
+        }
+
+        &__main {
+            grid-template-rows: 1fr 50px;
+        }
+
+        &__end {
+            &::before {
+                height: 360px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (min-height: 515px) {
+    $field-size: 450px;
+
+    .game {
+        &__main {
+            grid-template-rows: 1fr 60px;
+        }
+
+        &__zone {
+            @include field-size($field-size);
+
+            padding: 15px {
+                bottom: 0;
+            }
+
+            .game-cell {
+                &.correct {
+                    box-shadow: inset 0 0 0 2px #999999;
+                    border-width: 5px;
+                }
+    
+                &.uncorrect {
+                    border-width: 5px;
+                }
+            }
+        }
+
+        &__end {
+            &::before {
+                @include field-size($field-size);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-height: 665px) {
+    $field-size: 600px;
+
+    .game {
+        &__zone {
+            @include field-size($field-size);
+
+            padding: 20px {
+                bottom: 0;
+            }
+
+            .game-cell {
+                &.correct {
+                    border-width: 7px;
+                }
+    
+                &.uncorrect {
+                    border-width: 7px;
+                }
+            }
+        }
+
+        &__end {
+            &::before {
+                @include field-size($field-size);
+            }
+        }
+    }
+}

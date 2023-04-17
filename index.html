@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='css/game.min.css'>
+    <title>Colored Squares</title>
+</head>
+
+<body>
+
+    <div class='screen-box' id='screen-box'>
+
+        <div class='screen screen__one' id='screen-one'>
+            <div class='container'>
+                <h1 class='screen__title'>Colored Squares</h1>
+                <button type='button' class='btn btn__start' id='btn-start'>Start game</button>
+            </div>
+        </div>
+
+        <div class='screen screen__two' id='screen-two'>
+            <div class='container'>
+                <h1 class='screen__title'>Choose the size</h1>
+                <div class='levels-box' id='level-box'>
+                    <button type='button' class='btn levels-box__item'>3x3</button>
+                    <button type='button' class='btn levels-box__item'>4x4</button>
+                    <button type='button' class='btn levels-box__item'>5x5</button>
+                    <button type='button' class='btn levels-box__item'>6x6</button>
+                    <button type='button' class='btn levels-box__item'>7x7</button>
+                    <button type='button' class='btn levels-box__item'>8x8</button>
+                </div>
+            </div>
+        </div>
+
+        <div class='screen screen__game' id='screen-game'>
+            <div class='container'>
+                <div class='game__zone'>
+                    <div class='game__main'>
+                        <div class='game__field' id='game'></div>
+
+                        <div class='game__button-box'>
+                            <button type='button' class='btn btn__help' id='help-btn'>Help</button>
+                            <button type='button' class='btn btn__repeat' id='repeat-btn'>New Game</button>
+                        </div>
+                    </div>
+
+                    <div class='game__end win' id='win'>
+                        <h3 class='game__end-title'>You win!</h3>
+                    </div>
+
+                    <div class='game__end game-over' id='game-over'>
+                        <h3 class='game__end-title'>Game over!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src='js/classes/Game.js'></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
